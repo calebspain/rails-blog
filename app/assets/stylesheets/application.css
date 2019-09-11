@@ -13,5 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import 'fontawesome-all.min.css';
+/*
+ *= require font-awesome
+ */
  
