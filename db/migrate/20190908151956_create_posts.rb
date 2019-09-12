@@ -3,8 +3,10 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     create_table :posts do |t|
       t.string :title
       t.text :content
+      t.string :img_url
       t.string :slug
       t.integer :category_id
+      t.boolean :featured
 
       t.timestamps
     end
