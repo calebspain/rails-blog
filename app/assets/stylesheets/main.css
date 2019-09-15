@@ -75,6 +75,14 @@ input, select, textarea {
 	appearance: none;
 }
 
+label {
+	margin-bottom: 4px !important;
+}
+
+.field {
+	margin-top: 20px;
+}
+
 /* Basic */
 
 	@-ms-viewport {

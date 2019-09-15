@@ -15,8 +15,10 @@ ActiveRecord::Schema.define(version: 2019_09_08_151956) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.string "img_url"
     t.string "slug"
     t.integer "category_id"
+    t.boolean "featured"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

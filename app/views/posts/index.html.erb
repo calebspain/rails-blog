@@ -2,15 +2,15 @@
 
 <!-- Featured Post -->
     <% @posts.each do |post| %>
-        <% if post[:featured] %>
+        <% if post.featured %>
             <article class="post featured">
                 <header class="major">
-                    <span class="date">April 25, 2017</span>
-                    <h2><a href="#"><%= post[:title] %></a></h2>
+                    <span class="date"><%= post.created_at.to_formatted_s(:long) %></span>
+                    <h2><a href="#"><%= post.title %></a></h2>
                 </header>
-                <a href="#" class="image main"><img src="<%= post[:img_url] %>" alt=""></a>
+                <a href="#" class="image main"><img src="<%= post.img_url %>" alt=""></a>
                 <ul class="actions special">
-                    <li><a href="#" class="button large">Full Story</a></li>
+                    <li><a href="/posts/<%= post.id %>" class="button large">Full Story</a></li>
                 </ul>
             </article>
         <% end %>
@@ -19,15 +19,15 @@
 <!-- Posts -->
     <section class="posts">
         <% @posts.each do |post| %>
-            <% unless post[:featured] %>
+            <% unless post.featured %>
                 <article>
                     <header>
-                        <span class="date">April 24, 2017</span>
-                        <h2><a href="#"><%= post[:title] %></a></h2>
+                        <span class="date"><%= post.created_at.to_formatted_s(:long) %></span>
+                        <h2><a href="#"><%= post.title %></a></h2>
                     </header>
-                    <a href="#" class="image fit"><img src="<%= post[:img_url] %>" alt=""></a>
+                    <a href="#" class="image fit"><img src="<%= post.img_url %>" alt=""></a>
                     <ul class="actions special">
-                        <li><a href="#" class="button">Full Story</a></li>
+                        <li><a href="/posts/<%= post.id %>" class="button">Full Story</a></li>
                     </ul>
                 </article>
             <% end %>
